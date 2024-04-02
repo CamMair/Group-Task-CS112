@@ -17,7 +17,7 @@ public class CurrentAccount{
         System.out.println("Account Name: " + account.accountName);
         System.out.println("Account id: " + accountID);
         System.out.println("Balance: " );
-        System.out.println("Account Type: Current");
+        System.out.println("Account Type: AccountType");
         System.out.println("Overdraw: " account.overdrawAmount);
 
     }
