@@ -1,0 +1,34 @@
+public class SavingsAccount extends BankAccount {
+    private Float rate;
+
+
+    public Float getRate() {
+        return rate;
+    }
+
+    public void setRate(Float rate) {
+        this.rate = rate;
+    }
+
+    public SavingsAccount(String accountName, String accountId,Float rate){
+        super(accountName, accountId);
+//        this.accountName = new BankAccount().;
+//        this.accountId = accountId;
+          setRate(rate);
+
+    }
+
+    public void addInterest(Float rate, int currentBalance){
+
+        float newBalance = (currentBalance) + (currentBalance / rate);
+
+    }
+
+    public void printDetails(){
+        System.out.println("Account Name: " + getAccountName());
+        System.out.println("Account ID: " + getAccountNumber());
+        System.out.println("Balance: " + getBalance());
+        System.out.println("Account Type: Savings Account");
+        System.out.println("Interest Rate: " + getRate());
+    }
+}
