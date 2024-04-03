@@ -1,3 +1,5 @@
+//Murray Bryce
+
 public class SavingsAccount extends BankAccount {
     private Float rate;
 
@@ -19,7 +21,9 @@ public class SavingsAccount extends BankAccount {
 
     public void addInterest(Float rate, Float currentBalance){
 
-         this.setBalance(currentBalance*(1+(rate/100)));
+         Float newBalance = (currentBalance*(1+(rate/100)));
+        newBalance = (float) Math.round(newBalance * 100) / 100;
+        this.setBalance(newBalance);
 
     }
 
