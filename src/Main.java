@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        SavingsAccount savingsAccount = new SavingsAccount("steve", "5", 2.00f);
-        savingsAccount.setRate(2.00f);
-
+        Bank bank = new Bank();
+        CurrentAccount ca = new CurrentAccount("Cameron Mair", "CA1", 500);
+        bank.addAccount("ca", ca);
+        bank.printAllAccounts();
     }
 }

@@ -1,9 +1,6 @@
-package src;
-
+//Cameron Mair
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
-
 
 public class CurrentAccountTest {
     private CurrentAccount ca = new CurrentAccount("Cameron Mair", "CA1", 500);

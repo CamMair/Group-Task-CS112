@@ -1,3 +1,5 @@
+//Anushka Dare
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -23,7 +25,6 @@ public class Bank {
         }
     }
 
-/*
     public void printAllAccounts() {
         for(String id : idList) {
             if(idAccountMap.containsKey(id)) {
@@ -50,6 +51,4 @@ public class Bank {
             }
         }
     }
-*/
-
 }

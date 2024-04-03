@@ -1,9 +1,6 @@
-package src;
-
-
+//Cameron Mair
 public class CurrentAccount extends BankAccount{
     private Integer overdrawAmount;
-    BankAccount bankAccount;
 
     public CurrentAccount(String accountName, String accountID, Integer overdrawAmount) {
         super(accountName, accountID);
@@ -13,9 +10,9 @@ public class CurrentAccount extends BankAccount{
 
 
     public void printDetails(CurrentAccount account){
-        System.out.println("Account Name: " + bankAccount.getAccountName());
-        System.out.println("Account id: " + bankAccount.getAccountNumber());
-        System.out.println("Balance: " + bankAccount.getBalance() );
+        System.out.println("Account Name: " + getAccountName());
+        System.out.println("Account id: " + getAccountNumber());
+        System.out.println("Balance: " + getBalance() );
         System.out.println("Account Type: Current");
         System.out.println("Overdraw: " + getOverdrawAmount());
 
@@ -51,9 +48,9 @@ public class CurrentAccount extends BankAccount{
 
     @Override
     public void printDetails() {
-        System.out.println("Account Name: " + bankAccount.getAccountName());
-        System.out.println("Account id: " + bankAccount.getAccountNumber());
-        System.out.println("Balance: " + bankAccount.getBalance() );
+        System.out.println("Account Name: " + getAccountName());
+        System.out.println("Account id: " + getAccountNumber());
+        System.out.println("Balance: " + getBalance() );
         System.out.println("Account Type: Current");
         System.out.println("Overdraw: " + getOverdrawAmount());
 

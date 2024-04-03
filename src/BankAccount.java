@@ -1,3 +1,4 @@
+//Fraser Nixon
 public abstract class BankAccount {
     private static float lowRate;
     private static float highRate;
