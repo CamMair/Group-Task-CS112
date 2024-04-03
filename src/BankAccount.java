@@ -45,6 +45,7 @@ public abstract class BankAccount {
     }
 
     public static void setLowRate(float newLowRate) {
+        //Used as a clamp function
         lowRate = Math.max((float) 0, Math.min(highRate, newLowRate));
     }
 
