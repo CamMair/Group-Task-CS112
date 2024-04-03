@@ -13,15 +13,13 @@ public class SavingsAccount extends BankAccount {
 
     public SavingsAccount(String accountName, String accountId,Float rate){
         super(accountName, accountId);
-//        this.accountName = new BankAccount().;
-//        this.accountId = accountId;
           setRate(rate);
 
     }
 
     public void addInterest(Float rate, Float currentBalance){
 
-        float newBalance = (currentBalance) + (currentBalance / rate);
+         this.setBalance(currentBalance*(1+(rate/100)));
 
     }
 

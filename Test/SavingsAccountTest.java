@@ -8,11 +8,10 @@ public class SavingsAccountTest {
 
         @Test
         public void setRateTest(){
-            SavingsAccount savingsAccount = new SavingsAccount("Steve", "5", 2.00f);
             BankAccount.setHighRate(5.00f);
             BankAccount.setLowRate(1.00f);
-            System.out.println(BankAccount.getHighRate());
-            System.out.println(BankAccount.getLowRate());
+            SavingsAccount savingsAccount = new SavingsAccount("Steve", "5", 2.00f);
+
             savingsAccount.setRate(2.00f);
             assertTrue(savingsAccount.getRate() > BankAccount.getLowRate());
             assertTrue(savingsAccount.getRate() < BankAccount.getHighRate());
@@ -30,10 +29,10 @@ public class SavingsAccountTest {
 
         @Test
         public void addInterestTest(){
-            SavingsAccount savingsAccount = new SavingsAccount("Steve", "5", 5.00f);
+            SavingsAccount savingsAccount = new SavingsAccount("Steve", "5", 10.00f);
             savingsAccount.setBalance(100.00f);
-            savingsAccount.addInterest(5.00f, savingsAccount.getBalance());
-            assertTrue(savingsAccount.getBalance() == 105.00f);
+            savingsAccount.addInterest(10.00f, savingsAccount.getBalance());
+            assertTrue(savingsAccount.getBalance() == 110.00f);
         }
     }
 
