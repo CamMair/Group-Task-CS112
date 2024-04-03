@@ -7,8 +7,8 @@ public class SavingsAccount extends BankAccount {
     }
 
     public void setRate(Float rate) {
-     //   this.rate = Math.max((float) BankAccount.getLowRate(), Math.min(BankAccount.getHighRate(), rate));
-        if (rate < BankAccount.getLowRate())
+        this.rate = Math.max((float) BankAccount.getLowRate(), Math.min(BankAccount.getHighRate(), rate));
+
     }
 
     public SavingsAccount(String accountName, String accountId,Float rate){

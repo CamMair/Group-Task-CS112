@@ -9,18 +9,20 @@ public class SavingsAccountTest {
         @Test
         public void setRateTest(){
             SavingsAccount savingsAccount = new SavingsAccount("Steve", "5", 2.00f);
-            savingsAccount.setHighRate(5.00f);
-            savingsAccount.setLowRate(1.00f);
-            assertTrue(savingsAccount.getRate() > savingsAccount.getLowRate());
-            assertTrue(savingsAccount.getRate() < savingsAccount.getHighRate());
+            BankAccount.setHighRate(5.00f);
+            BankAccount.setLowRate(1.00f);
+            System.out.println(BankAccount.getHighRate());
+            System.out.println(BankAccount.getLowRate());
+            savingsAccount.setRate(2.00f);
+            assertTrue(savingsAccount.getRate() > BankAccount.getLowRate());
+            assertTrue(savingsAccount.getRate() < BankAccount.getHighRate());
 
 
             SavingsAccount savingsAccount1 = new SavingsAccount("steve", "5", 7.00f);
-            savingsAccount1.setHighRate(5.00f);
-            savingsAccount1.setLowRate(1.00f);
-            System.out.println(savingsAccount1.getRate());
-            assertTrue(savingsAccount.getRate() > savingsAccount.getLowRate());
-            assertTrue(savingsAccount.getRate() <= savingsAccount.getHighRate());
+            BankAccount.setHighRate(5.00f);
+            BankAccount.setLowRate(1.00f);
+            assertTrue(savingsAccount.getRate() > BankAccount.getLowRate());
+            assertTrue(savingsAccount.getRate() <= BankAccount.getHighRate());
 
 
 
@@ -35,4 +37,4 @@ public class SavingsAccountTest {
         }
     }
 
-}
+

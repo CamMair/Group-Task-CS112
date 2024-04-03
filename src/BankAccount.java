@@ -1,6 +1,6 @@
 public abstract class BankAccount {
-    private float lowRate;
-    private float highRate;
+    private static float lowRate;
+    private static float highRate;
 
     private float balance;
     private String accountName;
@@ -32,21 +32,20 @@ public abstract class BankAccount {
         this.accountNumber = accountNumber;
     }
 
-    public float getLowRate() {
+    public static float getLowRate() {
         return lowRate;
     }
 
-    public float getHighRate() {
+    public static float getHighRate() {
         return highRate;
     }
 
-    public void setLowRate(float newLowRate) {
+    public static void setLowRate(float newLowRate) {
         lowRate = Math.max((float) 0, Math.min(highRate, newLowRate));
     }
 
-    public void setHighRate(float newHighRate) {
+    public static void setHighRate(float newHighRate) {
         highRate = Math.max(lowRate, Math.min(10, newHighRate));
-        System.out.println(highRate);
     }
 
     public void deductBalance(float amount) {
