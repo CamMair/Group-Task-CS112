@@ -7,7 +7,7 @@ public class SavingsAccount extends BankAccount {
     }
 
     public void setRate(Float rate) {
-        this.rate = rate;
+        this.rate = Math.max((float) BankAccount.getLowRate(), Math.min(BankAccount.getHighRate(), rate));
     }
 
     public SavingsAccount(String accountName, String accountId,Float rate){
@@ -18,7 +18,7 @@ public class SavingsAccount extends BankAccount {
 
     }
 
-    public void addInterest(Float rate, int currentBalance){
+    public void addInterest(Float rate, Float currentBalance){
 
         float newBalance = (currentBalance) + (currentBalance / rate);
 

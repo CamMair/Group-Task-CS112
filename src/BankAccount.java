@@ -46,6 +46,7 @@ public abstract class BankAccount {
 
     public static void setHighRate(float newHighRate) {
         highRate = Math.max(lowRate, Math.min(10, newHighRate));
+        System.out.println(highRate);
     }
 
     public void deductBalance(float amount) {
