@@ -14,6 +14,7 @@ public abstract class BankAccount {
     public float getBalance() {
         return balance;
     }
+    public void setBalance(float balance){this.balance = balance;}
 
     public String getAccountName() {
         return accountName;
