@@ -1,5 +1,3 @@
-package src;
-
 public abstract class BankAccount {
     private static float lowRate;
     private static float highRate;
@@ -13,12 +11,10 @@ public abstract class BankAccount {
         this.accountNumber = accountNumber;
     }
 
-    public void setBalance(float balance){
-        this.balance = balance;
-    }
     public float getBalance() {
         return balance;
     }
+    public void setBalance(float balance){this.balance = balance;}
 
     public String getAccountName() {
         return accountName;
@@ -45,7 +41,6 @@ public abstract class BankAccount {
     }
 
     public static void setLowRate(float newLowRate) {
-        //Used as a clamp function
         lowRate = Math.max((float) 0, Math.min(highRate, newLowRate));
     }
 
